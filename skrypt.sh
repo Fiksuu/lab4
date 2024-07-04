@@ -21,3 +21,10 @@ if [[ "$1" == "--help" ]]; then
   echo "--logs: Create 100 log files"
   echo "--logs <number>: Create a specified number of log files"
 fi
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+  echo "--date -d: Display the current date"
+  echo "--logs -l: Create 100 log files"
+  echo "--logs <number> -l <number>: Create a specified number of log files"
+  echo "--error -e <number>: Create a specified number of error files"
+  echo "--init: Clone the repository and set PATH"
+fi
