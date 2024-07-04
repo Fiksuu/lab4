@@ -16,3 +16,8 @@ if [[ "$1" == "--logs" && "$2" =~ ^[0-9]+$ ]]; then
     date >> "log$i.txt"
   done
 fi
+if [[ "$1" == "--help" ]]; then
+  echo "--date: Display the current date"
+  echo "--logs: Create 100 log files"
+  echo "--logs <number>: Create a specified number of log files"
+fi
