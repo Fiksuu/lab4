@@ -28,3 +28,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
   echo "--error -e <number>: Create a specified number of error files"
   echo "--init: Clone the repository and set PATH"
 fi
+if [[ "$1" == "--init" ]]; then
+  git clone <url-repozytorium> $(pwd)
+  export PATH=$(pwd):$PATH
+fi
