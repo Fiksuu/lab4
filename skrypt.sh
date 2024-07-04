@@ -29,6 +29,6 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
   echo "--init: Clone the repository and set PATH"
 fi
 if [[ "$1" == "--init" ]]; then
-  git clone <url-repozytorium> $(pwd)
+  git clone https://github.com/Fiksuu/lab4.git $(pwd)
   export PATH=$(pwd):$PATH
 fi
