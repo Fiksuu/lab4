@@ -32,3 +32,12 @@ if [[ "$1" == "--init" ]]; then
   git clone https://github.com/Fiksuu/lab4.git $(pwd)
   export PATH=$(pwd):$PATH
 fi
+if [[ "$1" == "--error" ]]; then
+  count=${2:-100}
+  for i in $(seq 1 $count); do
+    mkdir -p error$i
+    echo "error$i/error$i.txt" > "error$i/error$i.txt"
+    echo "$(basename "$0")" >> "error$i/error$i.txt"
+    date >> "error$i/error$i.txt"
+  done
+fi
